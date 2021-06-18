@@ -1,0 +1,52 @@
+<!-- ---------------adding event listener-------------------------------------------- -->
+<!-- isse function se ham button or ant tag par kuch bhi task perform kar sakte h    
+ document.querySelectorAll(".drum")[i].addEventListener("click",function(){alert("i got clicked")}); yaha par addEventListener function me phla parmeter me event den h jo ham carkenge website par jaise click kare to kuch kaam ho just like etc aur dusare parameter me function dete h ham yaha anonymous function bhi de sakte h anonymous function wo hote h jo bhi naam ke hote h jaise upar likha hua h 
+ function gotclicked(){
+    alert("i got clicked");
+}
+
+document.querySelectorAll(".drum")[i].addEventListener("click",gotclicked); ye bhi sahi h aapne notice kiya hoga ki dusare parameter me hamne funcion diya h withot parnthesis ye tarika h iss addEventListener me function dene ka agar ham paranthesis laga kar funtion denge to wo function apply ho jayega without click ke  -->
+
+<!-- -----------------------------------------hoe to play sound -------------------------------------------  -->
+
+<!-- yaha par hamne this keyword ka use kiya h iss function ke andar document.querySelectorAll(".drum")[i].addEventListener("click",function(){console.log(this)}); to jab bhi kisi bhi drum pe click karenege ye hame wahi wala element dega  -->
+
+<!-- ----------------------------------------a deeper understanding of java script function----------------- -->
+
+<!-- yaha par agar hame constructor create karna hota h to ham new funcion ka use karte h yaha par constructor jaise ham normal function banate h waise hi banta h but pata chale ki ye constructor  to ham uss function ka phlea word capitial se start karte h for ex- function HouseKeeper(){
+
+}
+var houseKeeper=new HouseKeeper(); -->
+
+
+<!-- -----------------------object and their methods and the dot notation---------------------- -->
+
+<!-- methods function ki tarah hote h jo ki constructor me define kiye jate h agar koi bhi function constructor ke andar define h to ham use methods kahte h for ex-
+function HouseKeeper(YearOfExperince,name){
+    this.YearOfExperince=YearOfExperince;
+    this.name=name;
+    this.clean=funcion(){
+        alert("cleaning in process");
+    }
+}
+
+yaha par clean methods h 
+aur jaise yaha par Audio ek constructor h or play() ek method h jo ki constructor ke andar define h  -->
+
+<!-- --------------------------------call back functions--------------------------------------- -->
+<!-- callback function wo funcion hote h jo kisi event ke hone ke baad call ho unhe call back function khte h for ex- me yaha par ex likh rha hu 
+function addEventListner(typeofevent,callback){
+    var eventthathappen={
+        eventType:"keypress",
+        key:"p",
+        Durationofkeypress:"2"}
+        if(eventthathappen.eventType===typeofevent){
+            callback(eventthathappen);
+        }
+
+    }
+
+    addEventListner("keypress",function(event){
+        console.log(event);
+    })
+    jaise ki yaha par  addEventListner function h use phle ham ek event denge agar wo event sahi hoga use baad hi wo function chalega jaise abb manlo lo hamne  addEventListner function call kiya usme  hamne keypress event diya h aur dsare me function aab jo upsar  addEventListner function likha h wo call hoga uske call hote hi uske function ke andar sari line execute hongi phir uske baad agar eventthathappen.eventType===typeofevent ye hoga to phir hamra function call ho jayega  -->
